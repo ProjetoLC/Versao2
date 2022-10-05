@@ -21,12 +21,6 @@ class CampoForm extends StatefulWidget {
 }
 
 class _CampoFormState extends State<CampoForm> {
-  bool mostrarSenha = false;
-
-  bool ehCampoSenha(){
-    return widget.isSenha ?? false;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -50,16 +44,6 @@ class _CampoFormState extends State<CampoForm> {
                 border: const OutlineInputBorder(),
                 fillColor: Colors.white,
                 filled: true,
-                suffix: ehCampoSenha() ? IconButton(
-                  onPressed: () {
-                    setState(() {
-                      mostrarSenha = !mostrarSenha;
-                    });
-                  },
-                  icon: Icon(mostrarSenha == true
-                      ? Icons.visibility_off
-                      : Icons.remove_red_eye),
-                ): null,
               ),
             ),
           ],
