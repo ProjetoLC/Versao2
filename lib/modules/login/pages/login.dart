@@ -16,7 +16,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  var mostrarSenha = false;
   final _controller = UsuarioController();
   final _controller2 = LoginController();
 
